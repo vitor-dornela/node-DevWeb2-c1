@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "SB Admin 2 Frontend",
   "scripts": {
-    "start": "live-server --port=3000 --entry-file=pages/index.html src",
-    "dev": "live-server --port=3000 --entry-file=pages/index.html src",
+    "start": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
+    "dev": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
     "build": "mkdir -p dist && cp -r src/* dist/"
   },
   "dependencies": {
