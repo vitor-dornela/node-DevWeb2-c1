@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "SB Admin 2 Frontend",
   "scripts": {
-    "start": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
-    "dev": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
-    "build": "mkdir -p dist && cp -r src/* dist/ && sed -i 's|/assets/|./assets/|g' dist/pages/*.html"
+    "start": "live-server --port=3000 --entry-file=pages/index.html src",
+    "dev": "nodemon --watch src --ext html,css,js --exec \"live-server --port=3000 --entry-file=pages/index.html src\"",
+    "build": "mkdir -p dist && cp -r src/* dist/"
   },
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
-} 
+}
