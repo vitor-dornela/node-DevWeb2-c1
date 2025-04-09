@@ -5,7 +5,7 @@
   "scripts": {
     "start": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
     "dev": "live-server --port=3000 --entry-file=pages/index.html --mount=/assets:./src/assets src",
-    "build": "mkdir -p dist && cp -r src/* dist/"
+    "build": "mkdir -p dist && cp -r src/* dist/ && sed -i 's|/assets/|./assets/|g' dist/pages/*.html"
   },
   "dependencies": {
     "live-server": "^1.2.2"
