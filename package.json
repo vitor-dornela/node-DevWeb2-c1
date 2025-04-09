@@ -1,0 +1,12 @@
+{
+  "name": "sb-admin-frontend",
+  "version": "1.0.0",
+  "description": "SB Admin 2 Frontend",
+  "scripts": {
+    "start": "live-server --port=3000 --entry-file=pages/index.html src",
+    "dev": "live-server --port=3000 --entry-file=pages/index.html src"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+} 
